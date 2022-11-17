@@ -67,6 +67,18 @@ int main()
         while (displacement.first++)
             displacedPath[i++] = 'W';
     }
+    else if(displacement.first > 0 && displacement.second < 0){
+        while (displacement.second++)
+            displacedPath[i++] = 'S';
+        while (displacement.first--)
+            displacedPath[i++] = 'E';
+    }
+    else if(displacement.first <0 && displacement.second > 0){
+        while(displacement.second--)
+            displacedPath[i++] = 'N';
+        while(displacement.first++)
+            displacedPath[i++] = 'W';
+    }
     // PREVIOUS METHOD
     // while (displacement.second--)
     // {
